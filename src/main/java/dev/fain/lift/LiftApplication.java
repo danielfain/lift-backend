@@ -1,5 +1,7 @@
 package dev.fain.lift;
 
+import dev.fain.lift.exercise.Exercise;
+import dev.fain.lift.exercise.ExerciseRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

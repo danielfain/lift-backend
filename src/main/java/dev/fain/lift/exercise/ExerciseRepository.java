@@ -1,4 +1,4 @@
-package dev.fain.lift;
+package dev.fain.lift.exercise;
 
 import org.springframework.data.repository.CrudRepository;
 
