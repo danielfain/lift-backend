@@ -1,10 +1,12 @@
 package dev.fain.lift.model;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.sql.Date;
 
 @Entity
-@Table
+@Table(name = "users")
 public class User {
 
     @Id
@@ -13,15 +15,13 @@ public class User {
 
     private String name;
 
-    @GeneratedValue
-    private Timestamp createdAt;
+    @CreationTimestamp
+    private Date createdAt;
 
     @ManyToOne
     private Routine routine;
 
-    protected User() {
-
-    }
+    protected User() {}
 
     public User(String name, Routine routine) {
         this.name = name;
@@ -44,11 +44,11 @@ public class User {
         this.name = name;
     }
 
-    public Timestamp getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -59,4 +59,5 @@ public class User {
     public void setRoutine(Routine routine) {
         this.routine = routine;
     }
+
 }
