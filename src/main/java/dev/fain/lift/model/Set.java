@@ -1,5 +1,7 @@
 package dev.fain.lift.model;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -22,11 +24,10 @@ public class Set implements Serializable {
 
     private int reps;
 
+    @CreationTimestamp
     private Timestamp completedAt;
 
-    protected Set() {
-
-    }
+    protected Set() {}
 
     public Set(Workout workout, Exercise exercise, int set, int reps) {
         this.workout = workout;
@@ -82,4 +83,5 @@ public class Set implements Serializable {
     public void setCompletedAt(Timestamp completedAt) {
         this.completedAt = completedAt;
     }
+
 }

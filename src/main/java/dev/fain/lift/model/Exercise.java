@@ -14,9 +14,7 @@ public class Exercise {
 
     private int type;
 
-    protected Exercise() {
-
-    }
+    protected Exercise() {}
 
     public Exercise(String name, int type) {
         this.name = name;
@@ -46,4 +44,5 @@ public class Exercise {
     public void setType(int type) {
         this.type = type;
     }
+
 }

@@ -13,16 +13,12 @@ public class Workout {
     private int id;
 
     @ManyToOne
-    @JoinColumn
     private Routine routine;
 
     @ManyToMany
-    @OrderBy("name ASC")
     private List<Exercise> exercises = new ArrayList<>();
 
-    protected Workout() {
-
-    }
+    protected Workout() {}
 
     public Workout(Routine routine) {
         this.routine = routine;
@@ -51,4 +47,5 @@ public class Workout {
     public void setExercises(List<Exercise> exercises) {
         this.exercises = exercises;
     }
+
 }

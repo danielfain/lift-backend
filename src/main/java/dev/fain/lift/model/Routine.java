@@ -17,12 +17,9 @@ public class Routine {
     private int days;
 
     @ManyToMany
-    @OrderBy("name ASC")
     private List<Exercise> exercises = new ArrayList<>();
 
-    protected Routine() {
-
-    }
+    protected Routine() {}
 
     public Routine(String name, int days) {
         this.name = name;
@@ -53,8 +50,12 @@ public class Routine {
         this.days = days;
     }
 
-    @Override
-    public String toString() {
-        return "Routine: " + this.name;
+    public List<Exercise> getExercises() {
+        return exercises;
     }
+
+    public void setExercises(List<Exercise> exercises) {
+        this.exercises = exercises;
+    }
+
 }
