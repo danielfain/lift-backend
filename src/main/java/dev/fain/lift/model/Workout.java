@@ -1,7 +1,4 @@
-package dev.fain.lift.workout;
-
-import dev.fain.lift.exercise.Exercise;
-import dev.fain.lift.routine.Routine;
+package dev.fain.lift.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,7 +16,7 @@ public class Workout {
     @JoinColumn
     private Routine routine;
 
-    @OneToMany
+    @ManyToMany
     @OrderBy("name ASC")
     private List<Exercise> exercises = new ArrayList<>();
 

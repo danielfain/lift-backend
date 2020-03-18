@@ -1,7 +1,4 @@
-package dev.fain.lift.set;
-
-import dev.fain.lift.exercise.Exercise;
-import dev.fain.lift.workout.Workout;
+package dev.fain.lift.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

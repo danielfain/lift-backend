@@ -1,4 +1,4 @@
-package dev.fain.lift.exercise;
+package dev.fain.lift.model;
 
 import javax.persistence.*;
 

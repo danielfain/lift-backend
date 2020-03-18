@@ -1,6 +1,4 @@
-package dev.fain.lift.user;
-
-import dev.fain.lift.routine.Routine;
+package dev.fain.lift.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -13,23 +11,20 @@ public class User {
     @GeneratedValue
     private int id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @GeneratedValue
     private Timestamp createdAt;
 
     @ManyToOne
-    @JoinColumn
     private Routine routine;
 
     protected User() {
 
     }
 
-    public User(String name, Timestamp createdAt, Routine routine) {
+    public User(String name, Routine routine) {
         this.name = name;
-        this.createdAt = createdAt;
         this.routine = routine;
     }
 

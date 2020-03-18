@@ -1,6 +1,7 @@
-package dev.fain.lift.set;
+package dev.fain.lift.repository;
 
-import dev.fain.lift.workout.Workout;
+import dev.fain.lift.model.Set;
+import dev.fain.lift.model.Workout;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

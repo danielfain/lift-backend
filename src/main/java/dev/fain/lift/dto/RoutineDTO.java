@@ -1,34 +1,14 @@
-package dev.fain.lift.routine;
+package dev.fain.lift.dto;
 
-import javax.persistence.*;
-
-@Entity
-@Table
-public class Routine {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class RoutineDTO {
 
     private String name;
 
     private int days;
 
-    protected Routine() {
-
-    }
-
-    public Routine(String name, int days) {
+    public RoutineDTO(String name, int days) {
         this.name = name;
         this.days = days;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -46,4 +26,10 @@ public class Routine {
     public void setDays(int days) {
         this.days = days;
     }
+
+    @Override
+    public String toString() {
+        return "Routine: " + this.name;
+    }
+
 }
